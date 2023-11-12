@@ -1,0 +1,6 @@
+New project:
+	ng new my-first-app --no-strict --standalone false --routing false [create a new angular project]
+	npm install --save bootstrap@5 [install BS5 locally]
+	"node_modules/bootstrap/dist/css/bootstrap.min.css", [point .min.css before style.css in angular.json file]
+
+
