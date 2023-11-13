@@ -1,0 +1,17 @@
+<label for="oneWay" class="text-secondary">One way binding:</label>
+<input type="text"
+       id="oneWay"
+       class="form-control"
+       style="width: 200px"
+       (input)="onEditInputField($event)"
+>
+<p>{{inputText1}}</p>
+
+<label for="twoWay"><span class="text-danger">Two way binding form:</span></label>
+<input type="text"
+       id="twoWay"
+       class="form-control"
+       style="width: 200px"
+       [(ngModel)]=inputText2
+>
+<blockquote class="text-danger">{{inputText2}}</blockquote>
