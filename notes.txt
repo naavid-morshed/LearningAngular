@@ -12,7 +12,33 @@ example at my-first-app]
 (click)='fn(param)' (angular's own way of binding events)
 (input)='fn(param)' (input event)
 
+"_enabledBlockTypes": ["if", "for", "switch", "defer"], (inside tsconfig.json under "angularCompilerOptions" for experimental @if, @for, @switch features)
+
+
 Task:
 	1. Do SSR rendering for an angular app
 	2. Then do local rendering
 	3. Observe changes in package.json and angular.json file
+
+Experimental: [example at my-first-app/src/app/ng-if-condition.component.html]
+	      [fallthrough is not a thing in angular annotated switch-case]
+	1. <ol>
+    		@for (item of inputList;track item) {
+    			<li> {{item}} </li>
+    		}
+    	   </ol>
+	2. @if (inputText === "") {
+           	<p>No Text in input form</p>
+           }
+
+a) [ngStyle] = "{backgroundColor: getColor()}"
+b) <p
+      *ngIf="showOutput; else inputTextIsNull"
+      [ngClass]="{changeColor:inputText.length > 20}"
+    >{{inputText}}</p>
+    <ng-template #inputTextIsNull>
+      <p>
+        Default output
+      </p>
+    </ng-template> [* stands for structural directive, it changes DOM itself]
+c) <p *ngFor="let server of servers">{{server}}</p> [for loop, servers is an array]

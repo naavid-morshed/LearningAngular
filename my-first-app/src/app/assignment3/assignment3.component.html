@@ -1,0 +1,11 @@
+<button class="btn btn-primary" (click)="displayButtonClicked()">Display Details</button>
+<p [hidden]="showParagraph">Any content of my choice</p>
+<ol>
+  <li
+    class="mb-2"
+    *ngFor="let items of logArr; let i =index"
+    [ngStyle]="{backgroundColor: i >= 4 && i <=10 ? 'red': 'transparent'}"
+  >{{items + " & index is: " + i}}</li>
+</ol>
+<!--    [ngStyle]="{backgroundColor: setColor(items)}"-->
+<!-- ^ above is my preferred choice -->

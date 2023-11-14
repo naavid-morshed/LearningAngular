@@ -7,6 +7,8 @@ import { MultipleTypesOfSelectorsComponent } from './multiple-types-of-selectors
 import { ButtonTestComponent } from './button-test/button-test.component';
 import {FormsModule} from "@angular/forms";
 import { Assignment2Component } from './assignment2/assignment2.component';
+import { NgIfConditionComponent } from './ng-if-condition/ng-if-condition.component';
+import { Assignment3Component } from './assignment3/assignment3.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { Assignment2Component } from './assignment2/assignment2.component';
     FormComponent,
     MultipleTypesOfSelectorsComponent,
     ButtonTestComponent,
-    Assignment2Component
+    Assignment2Component,
+    NgIfConditionComponent,
+    Assignment3Component
   ],
   imports: [
     BrowserModule,

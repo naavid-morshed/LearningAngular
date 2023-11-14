@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center">
+  <div class="row">
+    <label>Conditional binding:</label>
+    <div class="col-11 pe-0">
+      <input type="text" class="form-control" [(ngModel)]="inputText">
+    </div>
+    <div class="col-1 ps-0">
+      <button type="submit" class="btn btn-info" (click)="buttonPressed()">Submit</button>
+    </div>
+    <p
+      *ngIf="showOutput; else inputTextIsNull"
+      [ngClass]="{changeColor:inputText.length > 20}"
+    >{{inputText}}</p>
+    <ng-template #inputTextIsNull>
+      <p>
+        Default output
+      </p>
+    </ng-template>
+
+    <!--    <h3 *ngFor="let items of inputList">{{server}}</h3>-->
+f
+    <!--    <ol>-->
+    <!--    @for (item of inputList;track item) {-->
+    <!--    <li> {{item}} </li>-->
+    <!--    }-->
+    <!--    </ol>-->
+
+    <!--     experimental feature, too much ide error -->
+    <!--        @if (inputText === "") {-->
+    <!--          <p>No Text in input form</p>-->
+    <!--        } @else if (showOutput == true) {-->
+    <!--         <p> {{inputText}} </p>-->
+    <!--        }-->
+
+  </div>
+</div>
