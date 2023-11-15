@@ -3,6 +3,8 @@ New project:
 	npm install --save bootstrap@5 [install BS5 locally]
 	"node_modules/bootstrap/dist/css/bootstrap.min.css", [point .min.css before style.css in angular.json file]
 
+(to determine supported nodejs version for angular): https://unpkg.com/browse/@angular/core@17.0.1/package.json
+
 [For Two-Way-Binding to work, ngModel  directive needs to be enabled. This is done by adding the FormsModule  to the imports[]  array in the AppModule. Also need to import it like: import {FormsModule} from "@angular/forms";
 example at my-first-app]
 
