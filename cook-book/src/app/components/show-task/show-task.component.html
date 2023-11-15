@@ -1,0 +1,24 @@
+<div class="table-responsive-md table-responsive-sm mt-5" id="radio_table">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Task</th>
+      <th>Details</th>
+      <th>Creation Date</th>
+      <th>Complete By</th>
+      <th>Status</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of toDoList;let i = index">
+    <tr>
+      <td>{{item.taskName}}</td>
+      <td>{{item.task}}</td>
+      <td>{{item.creationDate}}</td>
+      <td>{{item.completeBy}}</td>
+      <td class="d-flex justify-content-center">
+        <input class="form-check-input" type="checkbox" value="something" (click)="deleteTask(i)">
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
