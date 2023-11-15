@@ -6,6 +6,8 @@ New project:
 [For Two-Way-Binding to work, ngModel  directive needs to be enabled. This is done by adding the FormsModule  to the imports[]  array in the AppModule. Also need to import it like: import {FormsModule} from "@angular/forms";
 example at my-first-app]
 
+[ng generate component name --skip-tests] (--skip-tests to not generate test file)
+
 [foo] = "bar" (property binding)
 {{foo}} (String interpolation)
 
