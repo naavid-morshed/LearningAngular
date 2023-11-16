@@ -15,27 +15,29 @@ export class ShowTaskComponent {
   private weekday: string[] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
   private day: string = this.weekday[this.date.getDay()]
+  private localHour: number = this.date.getHours() > 13 ? this.date.getHours() - 12 : this.date.getHours() == 0 ? this.date.getHours() + 12 : this.date.getHours();
+  private minutes: string = this.date.getHours() < 10 ? "0".concat(this.date.getMinutes().toString()) : this.date.getMinutes().toString();
 
   toDoList: toDo[] = [
     new toDo(
       "clean",
       "clean home",
-      `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}`,
-      "Sunday"
-    ),new toDo(
-      "clean",
-      "clean home",
-      `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}`,
-      "Sunday"
-    ),new toDo(
-      "clean",
-      "clean home",
-      `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}`,
+      `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}, ${this.localHour}:${this.minutes}`,
       "Sunday"
     ), new toDo(
       "clean",
       "clean home",
-      `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}`,
+      `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}, ${this.localHour}:${this.minutes}`,
+      "Sunday"
+    ), new toDo(
+      "clean",
+      "clean home",
+      `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}, ${this.localHour}:${this.minutes}`,
+      "Sunday"
+    ), new toDo(
+      "clean",
+      "clean home",
+      `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}, ${this.localHour}:${this.minutes}`,
       "Sunday"
     ),
   ];
