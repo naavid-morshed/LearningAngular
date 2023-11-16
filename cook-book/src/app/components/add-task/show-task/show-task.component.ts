@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {toDo} from "../../model/to-do-task";
+import {toDo} from "../../../model/to-do-task";
 
 @Component({
   selector: 'app-show-task',
@@ -24,17 +24,20 @@ export class ShowTaskComponent {
       "clean home",
       `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}, ${this.localHour}:${this.minutes}`,
       "Sunday"
-    ), new toDo(
+    ),
+    new toDo(
       "clean",
       "clean home",
       `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}, ${this.localHour}:${this.minutes}`,
       "Sunday"
-    ), new toDo(
+    ),
+    new toDo(
       "clean",
       "clean home",
       `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}, ${this.localHour}:${this.minutes}`,
       "Sunday"
-    ), new toDo(
+    ),
+    new toDo(
       "clean",
       "clean home",
       `${this.day}, ${this.dateOfMonth}/${this.month}/${this.year}, ${this.localHour}:${this.minutes}`,
@@ -42,7 +45,11 @@ export class ShowTaskComponent {
     ),
   ];
 
-  deleteTask(index: number): void {
-    this.toDoList.splice(index, 1)
+  checkTask(index: number): void {
+    this.indexOfToDoListArr.push(index);
+
   }
+
+  public indexOfToDoListArr: number[] = [];
+
 }

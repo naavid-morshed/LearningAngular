@@ -16,9 +16,21 @@
       <td>{{item.creationDate}}</td>
       <td>{{item.completeBy}}</td>
       <td class="d-flex justify-content-center">
-        <input class="form-check-input" type="checkbox" value="something" (click)="deleteTask(i)">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="something"
+          (click)="checkTask(i)">
       </td>
     </tr>
     </tbody>
   </table>
+</div>
+<div class="mt-4 d-flex justify-content-end">
+  <input
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="indexOfToDoListArr.length < 1"
+    value="botton"
+  >
 </div>
