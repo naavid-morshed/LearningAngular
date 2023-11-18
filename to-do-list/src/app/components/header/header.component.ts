@@ -11,4 +11,7 @@ import {CustomButtonComponent} from "../custom-button/custom-button.component";
 })
 export class HeaderComponent {
 
+  toggleAddTask() {
+    console.log("asf")
+  }
 }

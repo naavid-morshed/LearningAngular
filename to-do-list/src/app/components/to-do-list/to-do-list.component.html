@@ -1,0 +1,19 @@
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th scope="col">Task</th>
+    <th scope="col">Due</th>
+    <th scope="col">Status</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of to_do_list">
+    <td >{{ item.task }}</td>
+    <td >{{ item.due }}</td>
+    <td class="text-center">
+      <input type="checkbox" name="checkBox">
+    </td>
+  </tr>
+  </tbody>
+</table>
+
