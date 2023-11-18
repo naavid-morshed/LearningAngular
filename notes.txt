@@ -18,7 +18,9 @@ example at my-first-app]
 
 "_enabledBlockTypes": ["if", "for", "switch", "defer"], (inside tsconfig.json under "angularCompilerOptions" for experimental @if, @for, @switch features)
 
-
+[https://github.com/FortAwesome/angular-fontawesome] [for font awesome]
+[https://www.npmjs.com/package/json-server] [nodejs json server  for testing]
+  - in package.json inside "scripts", add "server": "json-server --watch db.json --port 5000"
 Task:
 	1. Do SSR rendering for an angular app
 	2. Then do local rendering

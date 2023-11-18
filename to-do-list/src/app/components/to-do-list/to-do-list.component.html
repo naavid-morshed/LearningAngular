@@ -1,19 +1,23 @@
 <table class="table table-bordered">
+
   <thead>
   <tr>
     <th scope="col">Task</th>
     <th scope="col">Due</th>
-    <th scope="col">Status</th>
+    <th scope="col" class="text-center">Status</th>
   </tr>
   </thead>
+
   <tbody>
   <tr *ngFor="let item of to_do_list">
-    <td >{{ item.task }}</td>
-    <td >{{ item.due }}</td>
+    <td>{{ item.task }}</td>
+    <td>{{ item.due }}
+    </td>
     <td class="text-center">
-      <input type="checkbox" name="checkBox">
+      <fa-icon [ngStyle]="{'color':'red'}" [icon]="faTime"></fa-icon>
     </td>
   </tr>
   </tbody>
+
 </table>
 

@@ -1,4 +1,4 @@
-import {Component, Output, EventEmitter} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 @Component({
@@ -10,8 +10,9 @@ import {CommonModule} from '@angular/common';
 })
 export class CustomButtonComponent {
 
-  @Output() btnClick: EventEmitter<any> = new EventEmitter();
-  onClickCustomButton() {
+  @Output() public btnClick: EventEmitter<any> = new EventEmitter();
+
+  onClickCustomButton(): void {
     this.btnClick.emit();
   }
 }

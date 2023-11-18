@@ -1,6 +1,6 @@
-import {TODO_Service} from "./interface/TODO_Service";
+import {TODO_LIST_Interface} from "./interface/TODO_LIST_Interface";
 
-export const TO_DO: TODO_Service[] = [
+export const TO_DO_JSON: TODO_LIST_Interface[] = [
   {
     task: "Doctor's appointment",
     due: "May 5 at 2.30pm",
