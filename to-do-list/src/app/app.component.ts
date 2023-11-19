@@ -2,11 +2,11 @@ import {Component} from '@angular/core';
 
 import {CommonModule} from '@angular/common';
 // import {HttpClientModule} from "@angular/common/http";
-
 import {RouterOutlet} from '@angular/router';
 
 import {HeaderComponent} from "./components/header/header.component";
 import {ToDoListComponent} from "./components/to-do-list/to-do-list.component";
+
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,6 @@ import {ToDoListComponent} from "./components/to-do-list/to-do-list.component";
     RouterOutlet,
     HeaderComponent,
     ToDoListComponent,
-    // HttpClientModule,
   ],
   templateUrl: './app.component.html',
 })
