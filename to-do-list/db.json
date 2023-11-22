@@ -1,18 +1,39 @@
 {
   "todos": [
     {
+      "id": 1,
       "task": "Doctor's appointment",
       "due": "May 5 at 2.30pm",
       "reminder": false
     },
     {
+      "id": 2,
       "task": "Soccer practice",
       "due": "June 2 at 9.00am",
       "reminder": true
     },
     {
+      "id": 3,
       "task": "Elakar Genjaam",
       "due": "July 16 at 4.30pm",
+      "reminder": true
+    },
+    {
+      "id": 4,
+      "task": "Payday",
+      "due": "November 25 at 4.30pm",
+      "reminder": true
+    },
+    {
+      "id": 5,
+      "task": "Elakar Genjaam",
+      "due": "July 16 at 4.30pm",
+      "reminder": false
+    },
+    {
+      "id": 10,
+      "task": "asd",
+      "due": "2023-11-17T18:31",
       "reminder": true
     }
   ]
