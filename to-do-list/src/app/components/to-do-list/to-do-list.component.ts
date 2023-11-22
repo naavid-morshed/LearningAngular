@@ -12,16 +12,25 @@ import {TodoService} from "../../services/serve-to-do/todo.service";
   standalone: true,
   imports: [CommonModule, FaIconComponent],
   templateUrl: './to-do-list.component.html',
-  styleUrl: './to-do-list.component.css'
 })
-export class ToDoListComponent implements OnInit{
+export class ToDoListComponent implements OnInit {
   public to_do_list: TODO_LIST_Interface[] = [];
 
   public faTime: IconDefinition = faTimes;
 
-  // public todoService: TodoService = inject(TodoService);
+  // below is another way to do dependency injection but is not preferred by Angular
+  // private toDoService: TodoService = inject(TodoService);
+
+
+  /*
+  Injecting through constructor is the standard and recommended way to inject dependencies in Angular components.
+  It's the best practice because it allows Angular to manage the lifecycle of the injected service,
+  handle any necessary setup, and ensure that the service is available when the component is created.
+   */
   constructor(private toDoService: TodoService) {
   }
+
+
 
   ngOnInit(): void {
     this.toDoService.getToDoJSON().subscribe(

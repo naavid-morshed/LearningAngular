@@ -6,13 +6,12 @@ import {CommonModule} from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './custom-button.component.html',
-  styleUrl: './custom-button.component.css'
 })
 export class CustomButtonComponent {
 
-  @Output() public btnClick: EventEmitter<any> = new EventEmitter();
+  @Output() public customBtnClick: EventEmitter<any> = new EventEmitter();
 
   onClickCustomButton(): void {
-    this.btnClick.emit();
+    this.customBtnClick.emit();
   }
 }

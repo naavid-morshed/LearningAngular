@@ -7,7 +7,6 @@ import {CustomButtonComponent} from "../custom-button/custom-button.component";
   standalone: true,
   imports: [CommonModule, CustomButtonComponent],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
 })
 export class HeaderComponent {
 

@@ -7,7 +7,6 @@ import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from "./components/header/header.component";
 import {ToDoListComponent} from "./components/to-do-list/to-do-list.component";
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
