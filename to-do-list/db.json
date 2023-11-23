@@ -29,12 +29,6 @@
       "task": "Elakar Genjaam",
       "due": "July 16 at 4.30pm",
       "reminder": false
-    },
-    {
-      "id": 10,
-      "task": "asd",
-      "due": "2023-11-17T18:31",
-      "reminder": true
     }
   ]
 }

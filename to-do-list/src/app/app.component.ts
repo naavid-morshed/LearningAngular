@@ -6,6 +6,7 @@ import {RouterOutlet} from '@angular/router';
 
 import {HeaderComponent} from "./components/header/header.component";
 import {ToDoListComponent} from "./components/to-do-list/to-do-list.component";
+import {FooterComponent} from "./components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import {ToDoListComponent} from "./components/to-do-list/to-do-list.component";
     RouterOutlet,
     HeaderComponent,
     ToDoListComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
 })

@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from "@angular/forms";
 import {TO_DO} from "../../interface/TO_DO";
 import {randomInt} from "crypto";
+import {UiService} from "../../services/ui-service/ui.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-add-to-do',
@@ -13,9 +15,18 @@ import {randomInt} from "crypto";
 export class AddToDoComponent {
   @Output() onSubmitToDo: EventEmitter<TO_DO> = new EventEmitter<TO_DO>();
 
-  task: string = "";
-  dayAndTime: string = "";
-  reminder: boolean = false;
+  public task: string = "";
+  public dayAndTime: string = "";
+  public reminder: boolean = false;
+
+  public showAddTask: boolean = false;
+  private subscription: Subscription = new Subscription();
+
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(
+      (bool) => this.showAddTask = bool
+    )
+  }
 
   submitToDo() {
     if (!this.task) {
