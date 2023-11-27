@@ -1,0 +1,51 @@
+<form *ngIf="showAddTask" class="mb-4" (ngSubmit)="submitToDo()">
+  <div class="row">
+
+    <div class="col-6">
+      <div class="row">
+        <div class="col-2 pt-2">Task:</div>
+        <div class="col-10">
+          <input class="form-control"
+                 [(ngModel)]="task"
+                 name="task"
+                 id="1"
+                 placeholder="Task"
+                 type="text">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="row">
+        <div class="col-2 pt-2">Day & Time:</div>
+        <div class="col-10">
+          <input class="form-control"
+                 [(ngModel)]="dayAndTime"
+                 name="dayAndTime"
+                 placeholder="Due"
+                 type="datetime-local">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="row">
+        <div class="col-2 pt-2">Details:</div>
+        <div class="col-10 mt-2">
+          <input class="form-control"
+                 [(ngModel)]="details"
+                 name="reminder"
+                 placeholder="details"
+                 type="text">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div>
+    <input type="submit" value="Submit" class="mb-2 btn btn-info float-end">
+  </div>
+</form>
+
+

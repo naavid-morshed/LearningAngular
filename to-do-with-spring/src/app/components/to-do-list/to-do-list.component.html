@@ -1,0 +1,35 @@
+<app-add-to-do (onSubmitToDo)="addToDo($event)"></app-add-to-do>
+<table class="table table-bordered">
+
+  <thead>
+    <tr>
+      <th scope="col">Task</th>
+      <th scope="col">Details</th>
+      <th scope="col" class="text-center">Due</th>
+      <th scope="col" class="text-center">Edit</th>
+      <th scope="col" class="text-center">Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of to_do_list">
+      <td >
+        {{ item.task }}
+      </td>
+      <td >
+        {{ item.details }}
+      </td>
+      <td >
+        {{ item.dueDate + " " + item.dueTime}}
+      </td>
+      <td class="text-center">
+        <fa-icon (click)="editItem(item)" [ngStyle]="{'color':'red'}" [icon]="faEdit"></fa-icon>
+      </td>
+      <td class="text-center">
+        <fa-icon (click)="deleteItem(item)" [ngStyle]="{'color':'red'}" [icon]="faTime"></fa-icon>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+

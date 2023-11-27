@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "to-do-with-spring": {
+    "angular-dev-practice": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/to-do-with-spring",
+            "outputPath": "dist/angular-dev-practice",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -25,7 +25,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -63,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "to-do-with-spring:build:production"
+              "buildTarget": "angular-dev-practice:build:production"
             },
             "development": {
-              "buildTarget": "to-do-with-spring:build:development"
+              "buildTarget": "angular-dev-practice:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "to-do-with-spring:build"
+            "buildTarget": "angular-dev-practice:build"
           }
         },
         "test": {
