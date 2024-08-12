@@ -1,29 +1,24 @@
-<ul>
-    <li>
-        <app-user [avatar]="users[0].avatar"
-                  [id]="users[0].id"
-                  [name]="users[0].name"
-                  (selected)="onSelectUser($event)"
-        />
-    </li>
-    <li>
-        <app-user [avatar]="users[1].avatar"
-                  [id]="users[1].id"
-                  [name]="users[1].name"
-                  (selected)="onSelectUser($event)"
-        />
-    </li>
-    <li>
-        <app-user [avatar]="users[2].avatar"
-                  [id]="users[2].id"
-                  [name]="users[2].name"
-                  (selected)="onSelectUser($event)"
-        />
-    </li>
-</ul>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <ul>
+                <!--                @for (user of users; track user.id) {-->
+                <!--                    <li>-->
+                <!--                        <app-user [user]="user" (selected)="onSelectUser(user.id)"/>-->
+                <!--                    </li>-->
+                <!--                }-->
+                <li *ngFor="let user of users">
+                    <app-user [user]="user" (selected)="onSelectUser(user.id)"/>
+                </li>
+            </ul>
+        </div>
 
-<div class="row">
-    <div class="col-4"></div>
-    <div class="col-4">asdfasdf</div>
-    <div class="col-4"></div>
+        <div class="col-8">
+            @if (selectedUser) {
+                <app-user-details [user]="selectedUser"/>
+            } @else {
+                <p>Select an user</p>
+            }
+        </div>
+    </div>
 </div>

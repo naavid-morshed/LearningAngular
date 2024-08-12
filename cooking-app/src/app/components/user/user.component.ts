@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
+import {User} from "../../models/user.model";
 
 @Component({
     selector: 'app-user',
@@ -11,16 +12,15 @@ import {NgOptimizedImage} from "@angular/common";
     styleUrl: './user.component.css'
 })
 export class UserComponent {
-    @Input({required: true}) id!: number;
-    @Input({required: true}) name!: string;
-    @Input({required: true}) avatar!: string;
+    @Input() user?: User;
+
     @Output() selected = new EventEmitter<number>();
 
     get imageUrl(): string {
-        return `assets/${this.avatar}.jpeg`;
+        return `assets/${this.user?.avatar}.jpeg`;
     }
 
     onSelectUser(): void {
-        this.selected.emit(this.id)
+        this.selected.emit(this.user?.id ?? -1)
     }
 }
