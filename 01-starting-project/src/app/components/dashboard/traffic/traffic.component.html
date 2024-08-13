@@ -1,17 +1,15 @@
-<div class="dashboard-item">
-    <article>
-        <header>
-            <img src="globe.png" alt="A globe"/>
-            <h2>Traffic</h2>
-        </header>
-        <div id="traffic">
-            <p>Last 7 days</p>
+<article>
+    <header>
+        <img src="globe.png" alt="A globe"/>
+        <h2>Traffic</h2>
+    </header>
+    <div id="traffic">
+        <p>Last 7 days</p>
 
-            <div id="chart">
-                @for (item of percentageArray; track percentageArray) {
-                    <div [style.height]="item"></div>
-                }
-            </div>
+        <div id="chart">
+            @for (item of percentageArray; track percentageArray) {
+                <div [style.height]="item"></div>
+            }
         </div>
-    </article>
-</div>
+    </div>
+</article>
