@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
+  imports: [
+    NgOptimizedImage
+  ]
 })
 export class AppComponent {
   dummyTrafficData = [
