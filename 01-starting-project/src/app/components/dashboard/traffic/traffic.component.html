@@ -8,8 +8,8 @@
             <p>Last 7 days</p>
 
             <div id="chart">
-                @for (dataPoint of dummyTrafficData; track dataPoint.id) {
-                    <div [style.height]="(dataPoint.value / maxTraffic) * 100 + '%'"></div>
+                @for (item of percentageArray; track percentageArray) {
+                    <div [style.height]="item"></div>
                 }
             </div>
         </div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
+import {TrafficService} from "../../../services/traffic.service";
 
 @Component({
   selector: 'app-traffic',
@@ -8,35 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './traffic.component.css'
 })
 export class TrafficComponent {
-  dummyTrafficData = [
-    {
-      id: 'd1',
-      value: 433,
-    },
-    {
-      id: 'd2',
-      value: 260,
-    },
-    {
-      id: 'd3',
-      value: 290,
-    },
-    {
-      id: 'd4',
-      value: 410,
-    },
-    {
-      id: 'd5',
-      value: 397,
-    },
-    {
-      id: 'd6',
-      value: 488,
-    },
-    {
-      id: 'd47',
-      value: 589,
-    },
-  ];
-  maxTraffic = Math.max(...this.dummyTrafficData.map((data) => data.value));
+  trafficService: TrafficService = inject(TrafficService);
+
+  percentageArray: string[] = this.trafficService.calculatePercentage;
 }
